@@ -1,234 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <title>Mumbai Suburban Railway – Platform Charts</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #004080;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-    h2 {
-      color: #004080;
-      margin-top: 30px;
-      text-align: center;
-    }
-    table {
-      width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: white;
-      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background: #0066cc;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background: #f2f2f2;
-    }
-    footer {
-      margin-top: 40px;
-      background: #004080;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mumbai Suburban — UP/DOWN Platform Charts</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="color-scheme" content="light dark">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <h1>🚆 Mumbai Suburban — UP/DOWN Platform Charts</h1>
+      <p class="subtitle">Line-wise tables • Text version • Print ready</p>
+      <nav class="tabs">
+        <a href="#western">Western</a>
+        <a href="#central">Central</a>
+        <a href="#harbour">Harbour</a>
+        <a href="#transharbour">Trans-Harbour</a>
+        <a href="#vasai">Vasai–Panvel</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>🚆 Mumbai Suburban Railway – UP/DOWN Platform Charts</h1>
-</header>
+  <main class="container">
 
-<!-- 1. Harbour Line -->
-<h2>1. Harbour Line (Panvel – CSMT)</h2>
-<table>
-  <tr>
-    <th>Station</th>
-    <th>Towards CSMT (Up)</th>
-    <th>Towards Panvel (Down)</th>
-  </tr>
-  <tr><td>Panvel</td><td>PF 1/2</td><td>PF 3/4</td></tr>
-  <tr><td>Khandeshwar</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Mansarovar</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kharghar</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Belapur CBD</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Seawoods Darave</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Nerul</td><td>PF 1/2</td><td>PF 3/4</td></tr>
-  <tr><td>Juinagar</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Sanpada</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Vashi</td><td>PF 1/2</td><td>PF 3/4</td></tr>
-  <tr><td>Mankhurd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Govandi</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Chembur</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Tilak Nagar</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kurla (Harbour)</td><td>PF 7/8</td><td>PF 5/6</td></tr>
-  <tr><td>Chunabhatti</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>GTB Nagar</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Wadala Rd</td><td>PF 5/6</td><td>PF 7/8</td></tr>
-  <tr><td>Sewri</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Cotton Green</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Reay Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Dockyard Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Sandhurst Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Masjid</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>CSMT</td><td>PF 1/2</td><td>—</td></tr>
-</table>
+    <!-- Western Line -->
+    <section id="western" class="line-card">
+      <h2>Western Line <span class="route">Churchgate → Dahanu Road</span></h2>
+      <table class="pf-table">
+        <thead>
+          <tr>
+            <th>Station</th>
+            <th>UP (Churchgate side)</th>
+            <th>DOWN (Dahanu side)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Churchgate</td><td>2–5</td><td>1–2</td><td>Terminal</td></tr>
+          <tr><td>Marine Lines</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Charni Road</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Grant Road</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Mumbai Central (WR)</td><td>4–5</td><td>1–3</td><td>Interchange</td></tr>
+          <tr><td>Dadar (WR)</td><td>4–7</td><td>1–3</td><td>Major interchange</td></tr>
+          <tr><td>Bandra</td><td>4–6</td><td>1–3</td><td>Harbour link</td></tr>
+          <tr><td>Andheri</td><td>4–6</td><td>1–3</td><td>Metro + Harbour link</td></tr>
+          <tr><td>Borivali</td><td>6–8</td><td>1–5</td><td>Very busy</td></tr>
+          <tr><td>Virar</td><td>4–6</td><td>1–3</td><td>Suburban terminal</td></tr>
+          <tr><td>Dahanu Road</td><td>2–3</td><td>1</td><td>Last station</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-<!-- 2. Western Line -->
-<h2>2. Western Line (Churchgate – Virar/Dahanu)</h2>
-<table>
-  <tr>
-    <th>Station</th>
-    <th>Towards Churchgate (Up)</th>
-    <th>Towards Virar (Down)</th>
-  </tr>
-  <tr><td>Churchgate</td><td>PF 1–4</td><td>—</td></tr>
-  <tr><td>Marine Lines</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Charni Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Grant Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Mumbai Central</td><td>PF 3–7</td><td>PF 1/2</td></tr>
-  <tr><td>Mahalaxmi</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Lower Parel</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Prabhadevi</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Dadar (WR)</td><td>PF 2–5</td><td>PF 1/6</td></tr>
-  <tr><td>Matunga Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Mahim Jn</td><td>PF 1/2</td><td>PF 3/4</td></tr>
-  <tr><td>Bandra</td><td>PF 1–4</td><td>PF 5–8</td></tr>
-  <tr><td>Khar Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Santacruz</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Vile Parle</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Andheri</td><td>PF 4–7</td><td>PF 1–3</td></tr>
-  <tr><td>Jogeshwari</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Goregaon</td><td>PF 1–4</td><td>PF 5–8</td></tr>
-  <tr><td>Malad</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kandivali</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Borivali</td><td>PF 1–5</td><td>PF 6–8</td></tr>
-  <tr><td>Dahisar</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Mira Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Bhayandar</td><td>PF 1–4</td><td>PF 5–8</td></tr>
-  <tr><td>Naigaon</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Vasai Rd</td><td>PF 2–5</td><td>PF 1/6/7</td></tr>
-  <tr><td>Nalasopara</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Virar</td><td>PF 1–8</td><td>—</td></tr>
-  <tr><td>Dahanu Rd</td><td>PF 1/2</td><td>—</td></tr>
-</table>
+    <!-- Central Line -->
+    <section id="central" class="line-card">
+      <h2>Central Line <span class="route">CSMT → Kalyan → Kasara / Khopoli</span></h2>
+      <table class="pf-table">
+        <thead>
+          <tr>
+            <th>Station</th>
+            <th>UP (CSMT side)</th>
+            <th>DOWN (Kasara/Khopoli side)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>CSMT</td><td>1–7</td><td>8–18</td><td>Terminal</td></tr>
+          <tr><td>Byculla</td><td>4</td><td>3</td><td>—</td></tr>
+          <tr><td>Dadar (CR)</td><td>4–5</td><td>1–2</td><td>WR interchange</td></tr>
+          <tr><td>Kurla (CR)</td><td>5–6</td><td>7–8</td><td>Harbour link</td></tr>
+          <tr><td>Ghatkopar</td><td>2</td><td>1</td><td>Metro link</td></tr>
+          <tr><td>Thane</td><td>7–8</td><td>5–6</td><td>Major hub</td></tr>
+          <tr><td>Kalyan Jn.</td><td>6–7</td><td>1–5</td><td>Split to Kasara/Khopoli</td></tr>
+          <tr><td>Kasara</td><td>2</td><td>1</td><td>Last station (NE)</td></tr>
+          <tr><td>Khopoli</td><td>2</td><td>1</td><td>Last station (SE)</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-<!-- 3. Central Line -->
-<h2>3. Central Line (CSMT – Kasara/Khopoli)</h2>
-<table>
-  <tr>
-    <th>Station</th>
-    <th>Towards CSMT (Up)</th>
-    <th>Towards Kalyan/Kasara/Khopoli (Down)</th>
-  </tr>
-  <tr><td>CSMT</td><td>PF 1–7</td><td>—</td></tr>
-  <tr><td>Masjid</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Sandhurst Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Byculla</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Chinchpokli</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Currey Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Parel</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Dadar (CR)</td><td>PF 1–3</td><td>PF 4–7</td></tr>
-  <tr><td>Matunga (CR)</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Sion</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kurla (CR)</td><td>PF 3–5</td><td>PF 6–8</td></tr>
-  <tr><td>Vidyavihar</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Ghatkopar</td><td>PF 1–4</td><td>PF 5–8</td></tr>
-  <tr><td>Vikhroli</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kanjurmarg</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Bhandup</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Nahur</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Mulund</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Thane</td><td>PF 1–6</td><td>PF 7–10</td></tr>
-  <tr><td>Diva Jn</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Dombivli</td><td>PF 1–3</td><td>PF 4–6</td></tr>
-  <tr><td>Kalyan Jn</td><td>PF 1–4</td><td>PF 5–8</td></tr>
-  <tr><td colspan="3">Kasara branch → Titwala, Asangaon, Kasara (all PF 1/2)</td></tr>
-  <tr><td colspan="3">Khopoli branch → Ambivli, Ulhasnagar, Ambernath, Badlapur, Karjat, Khopoli (all PF 1/2)</td></tr>
-</table>
+    <!-- Harbour Line -->
+    <section id="harbour" class="line-card">
+      <h2>Harbour Line <span class="route">CSMT → Panvel / Belapur / Uran &amp; Andheri branch</span></h2>
+      <table class="pf-table">
+        <thead>
+          <tr>
+            <th>Station</th>
+            <th>UP (CSMT side)</th>
+            <th>DOWN (Panvel/Andheri side)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>CSMT</td><td>1–2</td><td>3–4</td><td>Terminal</td></tr>
+          <tr><td>Masjid</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Sandhurst Road</td><td>2</td><td>1</td><td>Junction</td></tr>
+          <tr><td>Dockyard Road</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>GTB Nagar</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Chunabhatti</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Kurla (Harbour)</td><td>7–8</td><td>5–6</td><td>Harbour–Main link</td></tr>
+          <tr><td>Vashi</td><td>4</td><td>1–3</td><td>Navi Mumbai hub</td></tr>
+          <tr><td>Nerul</td><td>4</td><td>3</td><td>Uran branch</td></tr>
+          <tr><td>Belapur CBD</td><td>3</td><td>1–2</td><td>—</td></tr>
+          <tr><td>Panvel</td><td>7–8</td><td>1–6</td><td>Major terminal</td></tr>
+        </tbody>
+      </table>
+      <p class="hint">Note: Andheri/Goregaon harbour branch par UP/DOWN ka logic Western Line jaisa hi follow hota hai.</p>
+    </section>
 
-<!-- 4. Trans-Harbour -->
-<h2>4. Trans-Harbour Line (Thane – Panvel/Vashi)</h2>
-<table>
-  <tr>
-    <th>Station</th>
-    <th>Towards Thane (Up)</th>
-    <th>Towards Panvel/Vashi (Down)</th>
-  </tr>
-  <tr><td>Thane</td><td>PF 9/10</td><td>PF 5–8</td></tr>
-  <tr><td>Airoli</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Rabale</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Ghansoli</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kopar Khairane</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Turbhe</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Sanpada</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Vashi</td><td>PF 3/4</td><td>PF 1/2</td></tr>
-  <tr><td>Nerul</td><td>PF 3/4</td><td>PF 1/2</td></tr>
-  <tr><td>Belapur</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Panvel</td><td>PF 3/4</td><td>PF 1/2</td></tr>
-</table>
+    <!-- Trans-Harbour Line -->
+    <section id="transharbour" class="line-card">
+      <h2>Trans-Harbour Line <span class="route">Thane → Vashi / Nerul / Panvel</span></h2>
+      <table class="pf-table">
+        <thead>
+          <tr>
+            <th>Station</th>
+            <th>UP (Thane side)</th>
+            <th>DOWN (Panvel side)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Thane</td><td>9–10</td><td>5–8</td><td>Start point</td></tr>
+          <tr><td>Airoli</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Rabale</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Ghansoli</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Kopar Khairane</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Turbhe</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Sanpada</td><td>2</td><td>1</td><td>Harbour link</td></tr>
+          <tr><td>Vashi</td><td>4</td><td>1–3</td><td>Hub</td></tr>
+          <tr><td>Nerul</td><td>4</td><td>3</td><td>Uran link</td></tr>
+          <tr><td>Panvel</td><td>7–8</td><td>1–6</td><td>Terminal</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-<!-- 5. Harbour Andheri/Goregaon branch -->
-<h2>5. Harbour Line – Andheri/Goregaon Branch</h2>
-<table>
-  <tr>
-    <th>Station</th>
-    <th>Towards Andheri/Goregaon (Up)</th>
-    <th>Towards Wadala Rd/CSMT (Down)</th>
-  </tr>
-  <tr><td>Kurla (Harbour)</td><td>PF 7/8</td><td>PF 5/6</td></tr>
-  <tr><td>Ghatkopar (Harbour)</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Vikhroli</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kanjurmarg</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Bhandup</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Nahur</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Mulund</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Thane</td><td>PF 9/10</td><td>PF 5–8</td></tr>
-  <tr><td>Andheri (Harbour)</td><td>PF 1/2</td><td>PF 3/4</td></tr>
-  <tr><td>Goregaon (Harbour)</td><td>PF 1/2</td><td>PF 3/4</td></tr>
-</table>
+        <!-- Harbour Branch: CSMT → Andheri/Goregaon -->
+    <section id="harbour-branch" class="line-card">
+      <h2>Harbour Line (Branch) <span class="route">CSMT → Wadala Rd → Andheri / Goregaon</span></h2>
+      <table class="pf-table">
+        <thead>
+          <tr>
+            <th>Station</th>
+            <th>UP (CSMT side)</th>
+            <th>DOWN (Andheri/Goregaon side)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>CSMT</td><td>1–2</td><td>3–4</td><td>Terminal</td></tr>
+          <tr><td>Masjid</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Sandhurst Road</td><td>2</td><td>1</td><td>Junction</td></tr>
+          <tr><td>Dockyard Road</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Reay Road</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Cotton Green</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Sewri</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Wadala Road</td><td>2–3</td><td>1–2</td><td>Branch point</td></tr>
+          <tr><td>King’s Circle</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Mahim</td><td>4</td><td>3</td><td>WR interchange</td></tr>
+          <tr><td>Bandra</td><td>6</td><td>5</td><td>WR interchange</td></tr>
+          <tr><td>Khar Road</td><td>4</td><td>3</td><td>—</td></tr>
+          <tr><td>Santa Cruz</td><td>4</td><td>3</td><td>—</td></tr>
+          <tr><td>Vile Parle</td><td>4</td><td>3</td><td>—</td></tr>
+          <tr><td>Andheri</td><td>6</td><td>5</td><td>WR Metro interchange</td></tr>
+          <tr><td>Jogeshwari</td><td>4</td><td>3</td><td>—</td></tr>
+          <tr><td>Ram Mandir</td><td>2</td><td>1</td><td>New halt</td></tr>
+          <tr><td>Goregaon</td><td>7–8</td><td>5–6</td><td>Harbour terminal</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-<!-- 6. Vasai Rd – Panvel -->
-<h2>6. Vasai Rd – Panvel Line</h2>
-<table>
-  <tr>
-    <th>Station</th>
-    <th>Towards Vasai Rd (Up)</th>
-    <th>Towards Panvel (Down)</th>
-  </tr>
-  <tr><td>Vasai Rd</td><td>PF 7/8</td><td>PF 6</td></tr>
-  <tr><td>Juchandra</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kaman Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kopar (CR link)</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Diva Jn</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Nilaje</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Taloja Panchanand</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Navade Rd</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Kalamboli</td><td>PF 1</td><td>PF 2</td></tr>
-  <tr><td>Panvel</td><td>PF 1/2</td><td>PF 3/4</td></tr>
-</table>
 
-<footer>
-  Designed by Sadulwar Sainath
-</footer>
+    <!-- Vasai–Panvel -->
+    <section id="vasai" class="line-card">
+      <h2>Vasai–Panvel Line <span class="route">Vasai Road (WR) → Panvel</span></h2>
+      <table class="pf-table">
+        <thead>
+          <tr>
+            <th>Station</th>
+            <th>UP (Vasai side)</th>
+            <th>DOWN (Panvel side)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Vasai Road (WR)</td><td>7–8</td><td>6</td><td>WR link</td></tr>
+          <tr><td>Juchandra</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Kaman Road</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Kopar</td><td>2</td><td>1</td><td>Diva link</td></tr>
+          <tr><td>Diva Junction</td><td>4</td><td>1–3</td><td>Major CR jn.</td></tr>
+          <tr><td>Nilaje</td><td>2</td><td>1</td><td>—</td></tr>
+          <tr><td>Taloja</td><td>2</td><td>1</td><td>MIDC</td></tr>
+          <tr><td>Panvel</td><td>7–8</td><td>1–6</td><td>Terminal</td></tr>
+        </tbody>
+      </table>
+    </section>
 
+    <aside class="notes">
+      <p>⚠️ Operational reasons (blocks/diversions) ke vajah se bade junctions par kabhi-kabhi platform allocation change ho sakta hai — specially CSMT, Churchgate, Dadar (WR/CR), Kurla, Thane, Borivali, Andheri, Virar, Panvel.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Your Name • Mumbai Local Platform Charts (text version)</p>
+    </div>
+  </footer>
 </body>
 </html>

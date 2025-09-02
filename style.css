@@ -1,67 +1,109 @@
-/* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ---------- CSS: clean, responsive, print-friendly ---------- */
+
+:root{
+  --bg: #0b0c0f;
+  --card: #12151a;
+  --text: #e9edf1;
+  --muted: #a7b1bb;
+  --accent: #4dd2ff;
+  --border: #27313b;
+  --tableStripe: rgba(255,255,255,.04);
 }
 
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f7f9fb;
+    --card:#ffffff;
+    --text:#0d1b2a;
+    --muted:#4a5568;
+    --accent:#0066cc;
+    --border:#e6ecf2;
+    --tableStripe:#f5f9ff;
+  }
 }
 
-/* Headings */
-h2 {
-  margin: 40px 0 15px;
-  font-size: 22px;
-  color: #222;
-  border-left: 6px solid #0078d7;
-  padding-left: 10px;
-  background: linear-gradient(to right, #eaf4ff, transparent);
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
-/* Table Styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
+/* container */
+.container{ width:min(1200px, 92%); margin:auto; }
+
+/* header */
+.site-header{
+  position:sticky; top:0; z-index:10;
+  background:linear-gradient(0deg, transparent, var(--bg));
+  border-bottom:1px solid var(--border);
+  backdrop-filter:saturate(180%) blur(8px);
+}
+.site-header .subtitle{ margin:.25rem 0 1rem; color:var(--muted); }
+.tabs{ display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+.tabs a{
+  text-decoration:none; color:var(--text);
+  border:1px solid var(--border); padding:.4rem .7rem; border-radius:.5rem;
+}
+.tabs a:hover{ border-color:var(--accent); color:var(--accent); }
+
+/* cards */
+.line-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:1rem;
+  margin:1.25rem 0;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.02), 0 10px 24px rgba(0,0,0,.12);
+}
+.line-card h2{
+  margin:.25rem 0 1rem;
+  font-size:1.35rem;
+  display:flex; align-items:baseline; gap:.75rem;
+}
+.route{ color:var(--muted); font-weight:500; font-size:.95rem; }
+
+/* table */
+.pf-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  overflow:auto; display:block;
+  border:1px solid var(--border);
+  border-radius:12px;
+}
+.pf-table thead th{
+  position:sticky; top:0;
+  background:linear-gradient(180deg, rgba(0,0,0,.06), transparent);
+  padding:.8rem .9rem;
+  text-align:left;
+  font-weight:700;
+  border-bottom:1px solid var(--border);
+}
+.pf-table td{
+  padding:.7rem .9rem;
+  border-bottom:1px solid var(--border);
+}
+.pf-table tbody tr:nth-child(odd){ background:var(--tableStripe); }
+.pf-table tbody tr:hover{ outline: 2px solid var(--accent); outline-offset:-2px; }
+
+/* hint & notes */
+.hint{ margin:.6rem 0 0; color:var(--muted); font-size:.95rem; }
+.notes{
+  margin:1.5rem 0 3rem; color:var(--muted);
+  border-left:3px solid var(--accent); padding-left:.9rem;
 }
 
-table th, table td {
-  padding: 12px 15px;
-  text-align: center;
-  border-bottom: 1px solid #e1e5ea;
-}
+/* footer */
+.site-footer{ border-top:1px solid var(--border); padding:1.25rem 0 2.5rem; color:var(--muted); }
 
-table th {
-  background: #0078d7;
-  color: #fff;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-}
-
-table tr:nth-child(even) {
-  background: #f9fbfd;
-}
-
-table tr:hover {
-  background: #eef6ff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 15px;
-  font-size: 14px;
-  color: #666;
-  background: #eaf4ff;
-  border-top: 2px solid #0078d7;
+/* print styles */
+@media print {
+  :root{ --bg:#fff; --card:#fff; --text:#000; --muted:#333; --border:#ccc; --tableStripe:#f6f6f6; }
+  body{ background:#fff; }
+  .site-header, .tabs, .site-footer{ display:none; }
+  .line-card{ box-shadow:none; border-color:#bbb; page-break-inside:avoid; }
+  .pf-table thead th{ background:#f0f0f0 !important; }
 }
